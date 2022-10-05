@@ -37,8 +37,12 @@ public class CsvFiles {
 		Scanner fr = new Scanner(file);
 		
 		while (fr.hasNextLine()) {
-			String[] row = fr.nextLine().split(",");
-			otherContacts.add(new Contact(row[0], row[1]));
+			// String[] row = fr.nextLine().split(",");
+			// otherContacts.add(new Contact(row[0], row[1]));
+			
+			Scanner line = new Scanner(fr.nextLine());
+			line.useDelimiter(",");
+			otherContacts.add(new Contact(line.next(), line.next()));
 		}
 		
 		for (Contact contact : otherContacts) {
