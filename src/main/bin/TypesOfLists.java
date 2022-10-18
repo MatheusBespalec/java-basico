@@ -72,7 +72,7 @@ public class TypesOfLists {
 		System.out.println("----- Lista de Funcionarios Ordenados por Salario -----");
 		
 		// employees.sort((employee1, employee2) -> Double.compare(employee1.getSalary(), employee2.getSalary()));
-		employees.sort(Comparator.comparing(Employee::getSalary));
+		employees.sort(Comparator.comparing(Employee::getSalary)); // Metodo Reference => Employee::getSalary == e -> e->getSalary() 
 		employees.forEach((employee) -> System.out.println(employee));
 	}
 
